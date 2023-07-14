@@ -29,6 +29,9 @@ function App() {
     }
 
     function addToCart(shoe) {
+        if (isInCart(shoe)) {
+            return
+        }
         let item = JSON.parse(JSON.stringify(shoe))
         item.quantity = 1
         cartItems.push(item)
