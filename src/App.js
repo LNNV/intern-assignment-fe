@@ -71,11 +71,11 @@ function App() {
     function removeItem(item) {
         const element = document.getElementById(item.shoes_id + "-cart-item")
         element.className="Cart-item-container-remove"
-        setTimeout(() => {
-            cartItems = cartItems.filter(x => x.shoes_id !== item.shoes_id)
-            localStorage.setItem("cartItems", JSON.stringify(cartItems))
-            fetchShoesData()
-        }, 100);
+        //setTimeout(() => {
+        cartItems = cartItems.filter(x => x.shoes_id !== item.shoes_id)
+        localStorage.setItem("cartItems", JSON.stringify(cartItems))
+        fetchShoesData()
+        //}, 100);
     }
 
     function totalAmount() {
